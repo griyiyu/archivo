@@ -4,14 +4,14 @@ class Step < ActiveRecord::Base
   belongs_to :office
   
   # Crea una nueva instancia de step que tiene la oficina "mesa de entrada"
-  def start
+  def self.start
     office = Office.where(name: 'Mesa de entrada').first
     create({ :office => office })
   end
   
   
   # Crea una nueva instancia de Step ue tiene la oficina "Archivo" y si no existe la oficina la crea
-  def archivate
+  def self.archivate
     officeName = 'Archivo'
     office = Office.where(name: officeName).first
     if (office == nil)
