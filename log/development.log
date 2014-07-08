@@ -5772,3 +5772,552 @@ Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-03 18:51:24 -0300
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-03 18:51:24 -0300
+
+
+Started GET "/offices" for 127.0.0.1 at 2014-07-08 19:17:22 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by OfficesController#index as HTML
+  [1m[35mOffice Load (0.4ms)[0m  SELECT "offices".* FROM "offices"
+  Rendered offices/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 149ms (Views: 124.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-08 19:17:22 -0300
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-08 19:17:22 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-08 19:17:23 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 19:17:23 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 19:17:23 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-08 19:17:23 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 19:17:23 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 19:17:23 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 19:17:23 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-08 19:17:23 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-08 19:17:23 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-08 19:17:23 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-08 19:17:23 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 19:17:23 -0300
+
+
+Started GET "/steps" for 127.0.0.1 at 2014-07-08 19:17:32 -0300
+Processing by StepsController#index as HTML
+  [1m[36mStep Load (0.5ms)[0m  [1mSELECT "steps".* FROM "steps"[0m
+  [1m[35mFileRecord Load (0.5ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mOffice Load (0.2ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered steps/index.html.erb within layouts/application (109.8ms)
+Completed 500 Internal Server Error in 135ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    14:     <% @steps.each do |step| %>
+    15:       <tr>
+    16:         <td><%= step.file_record.title %></td>
+    17:         <td><%= step.person.name %></td>
+    18:         <td><%= step.office.name %></td>
+    19:         <td><%= link_to 'Show', step %></td>
+    20:         <td><%= link_to 'Edit', edit_step_path(step) %></td>
+  app/views/steps/index.html.erb:17:in `block in _app_views_steps_index_html_erb___2952055260217925942_70197585711220'
+  app/views/steps/index.html.erb:14:in `_app_views_steps_index_html_erb___2952055260217925942_70197585711220'
+
+
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.1ms)
+
+
+Started GET "/steps" for 127.0.0.1 at 2014-07-08 19:26:58 -0300
+Processing by StepsController#index as HTML
+  [1m[35mStep Load (0.4ms)[0m  SELECT "steps".* FROM "steps"
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mOffice Load (0.2ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered steps/index.html.erb within layouts/application (41.3ms)
+Completed 500 Internal Server Error in 46ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    14:     <% @steps.each do |step| %>
+    15:       <tr>
+    16:         <td><%= step.file_record.title %></td>
+    17:         <td><%= step.person.name %></td>
+    18:         <td><%= step.office.name %></td>
+    19:         <td><%= link_to 'Show', step %></td>
+    20:         <td><%= link_to 'Edit', edit_step_path(step) %></td>
+  app/views/steps/index.html.erb:17:in `block in _app_views_steps_index_html_erb___2952055260217925942_70197585711220'
+  app/views/steps/index.html.erb:14:in `_app_views_steps_index_html_erb___2952055260217925942_70197585711220'
+
+
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.7ms)
+
+
+Started GET "/steps" for 127.0.0.1 at 2014-07-08 19:26:59 -0300
+Processing by StepsController#index as HTML
+  [1m[36mStep Load (0.2ms)[0m  [1mSELECT "steps".* FROM "steps"[0m
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered steps/index.html.erb within layouts/application (15.1ms)
+Completed 500 Internal Server Error in 19ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    14:     <% @steps.each do |step| %>
+    15:       <tr>
+    16:         <td><%= step.file_record.title %></td>
+    17:         <td><%= step.person.name %></td>
+    18:         <td><%= step.office.name %></td>
+    19:         <td><%= link_to 'Show', step %></td>
+    20:         <td><%= link_to 'Edit', edit_step_path(step) %></td>
+  app/views/steps/index.html.erb:17:in `block in _app_views_steps_index_html_erb___2952055260217925942_70197585711220'
+  app/views/steps/index.html.erb:14:in `_app_views_steps_index_html_erb___2952055260217925942_70197585711220'
+
+
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.0ms)
+
+
+Started GET "/steps" for 127.0.0.1 at 2014-07-08 19:27:00 -0300
+Processing by StepsController#index as HTML
+  [1m[35mStep Load (0.2ms)[0m  SELECT "steps".* FROM "steps"
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered steps/index.html.erb within layouts/application (15.1ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    14:     <% @steps.each do |step| %>
+    15:       <tr>
+    16:         <td><%= step.file_record.title %></td>
+    17:         <td><%= step.person.name %></td>
+    18:         <td><%= step.office.name %></td>
+    19:         <td><%= link_to 'Show', step %></td>
+    20:         <td><%= link_to 'Edit', edit_step_path(step) %></td>
+  app/views/steps/index.html.erb:17:in `block in _app_views_steps_index_html_erb___2952055260217925942_70197585711220'
+  app/views/steps/index.html.erb:14:in `_app_views_steps_index_html_erb___2952055260217925942_70197585711220'
+
+
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.2ms)
+
+
+Started GET "/steps" for 127.0.0.1 at 2014-07-08 19:27:01 -0300
+Processing by StepsController#index as HTML
+  [1m[36mStep Load (0.4ms)[0m  [1mSELECT "steps".* FROM "steps"[0m
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered steps/index.html.erb within layouts/application (18.3ms)
+Completed 500 Internal Server Error in 23ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    14:     <% @steps.each do |step| %>
+    15:       <tr>
+    16:         <td><%= step.file_record.title %></td>
+    17:         <td><%= step.person.name %></td>
+    18:         <td><%= step.office.name %></td>
+    19:         <td><%= link_to 'Show', step %></td>
+    20:         <td><%= link_to 'Edit', edit_step_path(step) %></td>
+  app/views/steps/index.html.erb:17:in `block in _app_views_steps_index_html_erb___2952055260217925942_70197585711220'
+  app/views/steps/index.html.erb:14:in `_app_views_steps_index_html_erb___2952055260217925942_70197585711220'
+
+
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.0ms)
+
+
+Started GET "/steps" for 127.0.0.1 at 2014-07-08 19:27:17 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StepsController#index as HTML
+  [1m[35mStep Load (0.3ms)[0m  SELECT "steps".* FROM "steps"
+  [1m[36mFileRecord Load (0.3ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mOffice Load (0.2ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered steps/index.html.erb within layouts/application (55.7ms)
+Completed 500 Internal Server Error in 76ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    14:     <% @steps.each do |step| %>
+    15:       <tr>
+    16:         <td><%= step.file_record.title %></td>
+    17:         <td><%= step.person.name %></td>
+    18:         <td><%= step.office.name %></td>
+    19:         <td><%= link_to 'Show', step %></td>
+    20:         <td><%= link_to 'Edit', edit_step_path(step) %></td>
+  app/views/steps/index.html.erb:17:in `block in _app_views_steps_index_html_erb___1400311492171276912_70261243095880'
+  app/views/steps/index.html.erb:14:in `_app_views_steps_index_html_erb___1400311492171276912_70261243095880'
+
+
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.7ms)
+
+
+Started GET "/steps" for 127.0.0.1 at 2014-07-08 19:27:23 -0300
+Processing by StepsController#index as HTML
+  [1m[36mStep Load (0.3ms)[0m  [1mSELECT "steps".* FROM "steps"[0m
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered steps/index.html.erb within layouts/application (16.5ms)
+Completed 500 Internal Server Error in 19ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    14:     <% @steps.each do |step| %>
+    15:       <tr>
+    16:         <td><%= step.file_record.title %></td>
+    17:         <td><%= step.person.name %></td>
+    18:         <td><%= step.office.name %></td>
+    19:         <td><%= link_to 'Show', step %></td>
+    20:         <td><%= link_to 'Edit', edit_step_path(step) %></td>
+  app/views/steps/index.html.erb:17:in `block in _app_views_steps_index_html_erb___1400311492171276912_70261243095880'
+  app/views/steps/index.html.erb:14:in `_app_views_steps_index_html_erb___1400311492171276912_70261243095880'
+
+
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.0ms)
+
+
+Started GET "/steps" for 127.0.0.1 at 2014-07-08 19:27:24 -0300
+Processing by StepsController#index as HTML
+  [1m[35mStep Load (0.2ms)[0m  SELECT "steps".* FROM "steps"
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered steps/index.html.erb within layouts/application (18.1ms)
+Completed 500 Internal Server Error in 20ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    14:     <% @steps.each do |step| %>
+    15:       <tr>
+    16:         <td><%= step.file_record.title %></td>
+    17:         <td><%= step.person.name %></td>
+    18:         <td><%= step.office.name %></td>
+    19:         <td><%= link_to 'Show', step %></td>
+    20:         <td><%= link_to 'Edit', edit_step_path(step) %></td>
+  app/views/steps/index.html.erb:17:in `block in _app_views_steps_index_html_erb___1400311492171276912_70261243095880'
+  app/views/steps/index.html.erb:14:in `_app_views_steps_index_html_erb___1400311492171276912_70261243095880'
+
+
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.6ms)
+
+
+Started GET "/steps" for 127.0.0.1 at 2014-07-08 19:29:02 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StepsController#index as HTML
+  [1m[35mStep Load (0.3ms)[0m  SELECT "steps".* FROM "steps"
+  [1m[36mFileRecord Load (0.3ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered steps/index.html.erb within layouts/application (55.0ms)
+Completed 200 OK in 124ms (Views: 106.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-08 19:29:03 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-08 19:29:03 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-08 19:29:03 -0300
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-08 19:29:03 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-08 19:29:03 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-08 19:29:03 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-08 19:29:03 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-08 19:29:03 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-08 19:29:03 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-08 19:29:03 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-08 19:29:03 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-08 19:29:03 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-08 19:29:03 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-08 19:29:03 -0300
+
+
+Started GET "/steps/7" for 127.0.0.1 at 2014-07-08 19:29:22 -0300
+Processing by StepsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mStep Load (0.3ms)[0m  SELECT  "steps".* FROM "steps"  WHERE "steps"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered steps/show.html.erb within layouts/application (16.9ms)
+Completed 500 Internal Server Error in 21ms
+
+ActionView::Template::Error (undefined local variable or method `step' for #<#<Class:0x007f1650dad208>:0x007f1650535a08>):
+     6: </p>
+     7: 
+     8: <p>
+     9:   <% if step.person != nil %>
+    10:     <strong>Person:</strong>
+    11:     <%= @step.person.name %>
+    12:   <% end %>
+  app/views/steps/show.html.erb:9:in `_app_views_steps_show_html_erb__220852965956605171_69866906821200'
+
+
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.3ms)
+
+
+Started GET "/steps/7" for 127.0.0.1 at 2014-07-08 19:29:22 -0300
+Processing by StepsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mStep Load (0.2ms)[0m  SELECT  "steps".* FROM "steps"  WHERE "steps"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered steps/show.html.erb within layouts/application (13.5ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (undefined local variable or method `step' for #<#<Class:0x007f1650dad208>:0x007f165088b8d8>):
+     6: </p>
+     7: 
+     8: <p>
+     9:   <% if step.person != nil %>
+    10:     <strong>Person:</strong>
+    11:     <%= @step.person.name %>
+    12:   <% end %>
+  app/views/steps/show.html.erb:9:in `_app_views_steps_show_html_erb__220852965956605171_69866908569540'
+
+
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.8ms)
+
+
+Started GET "/steps/1" for 127.0.0.1 at 2014-07-08 19:29:55 -0300
+Processing by StepsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStep Load (0.2ms)[0m  SELECT  "steps".* FROM "steps"  WHERE "steps"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered steps/show.html.erb within layouts/application (13.5ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (undefined local variable or method `step' for #<#<Class:0x007f1650dad208>:0x007f1650ba7b70>):
+     6: </p>
+     7: 
+     8: <p>
+     9:   <% if step.person != nil %>
+    10:     <strong>Person:</strong>
+    11:     <%= @step.person.name %>
+    12:   <% end %>
+  app/views/steps/show.html.erb:9:in `_app_views_steps_show_html_erb__220852965956605171_69866906821200'
+
+
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.7ms)
+
+
+Started GET "/steps/1" for 127.0.0.1 at 2014-07-08 19:29:55 -0300
+Processing by StepsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStep Load (0.1ms)[0m  SELECT  "steps".* FROM "steps"  WHERE "steps"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered steps/show.html.erb within layouts/application (12.9ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (undefined local variable or method `step' for #<#<Class:0x007f1650dad208>:0x007f1650f0fd08>):
+     6: </p>
+     7: 
+     8: <p>
+     9:   <% if step.person != nil %>
+    10:     <strong>Person:</strong>
+    11:     <%= @step.person.name %>
+    12:   <% end %>
+  app/views/steps/show.html.erb:9:in `_app_views_steps_show_html_erb__220852965956605171_69866908569540'
+
+
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.1ms)
+
+
+Started GET "/steps/1" for 127.0.0.1 at 2014-07-08 19:30:32 -0300
+Processing by StepsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStep Load (0.1ms)[0m  SELECT  "steps".* FROM "steps"  WHERE "steps"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered steps/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/steps/7" for 127.0.0.1 at 2014-07-08 19:30:36 -0300
+Processing by StepsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mStep Load (0.2ms)[0m  SELECT  "steps".* FROM "steps"  WHERE "steps"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered steps/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.5ms)

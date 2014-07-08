@@ -14,7 +14,9 @@
     <% @steps.each do |step| %>
       <tr>
         <td><%= step.file_record.title %></td>
-        <td><%= step.person.name %></td>
+        <% if step.person != nil %>
+          <td><%= step.person.name %></td>
+        <% end %>
         <td><%= step.office.name %></td>
         <td><%= link_to 'Show', step %></td>
         <td><%= link_to 'Edit', edit_step_path(step) %></td>

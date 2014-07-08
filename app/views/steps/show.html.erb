@@ -6,8 +6,10 @@
 </p>
 
 <p>
-  <strong>Person:</strong>
-  <%= @step.person.name %>
+  <% if @step.person != nil %>
+    <strong>Person:</strong>
+    <%= @step.person.name %>
+  <% end %>
 </p>
 
 <p>
