@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>File record:</strong>
-  <%= @step.file_record.title %>
+  <% if @step.file_record != nil %>
+    <strong>File record:</strong>
+    <%= @step.file_record.title %>
+  <% end %>
 </p>
 
 <p>
@@ -13,8 +15,10 @@
 </p>
 
 <p>
-  <strong>Office:</strong>
-  <%= @step.office.name %>
+  <% if @step.office != nil %>
+    <strong>Office:</strong>
+    <%= @step.office.name %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_step_path(@step) %> |
