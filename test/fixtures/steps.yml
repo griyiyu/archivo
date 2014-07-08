@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  file_record_id: 
+  person_id: 
+  office_id: 
+
+two:
+  file_record_id: 
+  person_id: 
+  office_id: 

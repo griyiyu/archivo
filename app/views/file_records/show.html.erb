@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @file_record.title %>
+</p>
+
+<p>
+  <strong>Asociated steps:</strong>
+  <table>
+    <thead>
+      <tr>
+        <th>File record</th>
+        <th>Person</th>
+        <th>Office</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+    <% @file_record.steps.each do |step| %>
+        <tr>
+          <td><%= step.file_record.title %></td>
+          <td><%= step.person %></td>
+          <td><%= step.office.name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</p>
+
+
+<%= link_to 'Edit', edit_file_record_path(@file_record) %> |
+<%= link_to 'Back', file_records_path %>
+<br>
+<%= link_to 'Select', offices_path %>
