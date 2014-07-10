@@ -8,4 +8,8 @@ class FileRecord < ActiveRecord::Base
     steps.create({ :office => office })
   end
   
+  def archivate
+    steps.archivate
+  end
+  
 end
