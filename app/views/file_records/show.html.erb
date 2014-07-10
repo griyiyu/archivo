@@ -20,9 +20,19 @@
     <tbody>
     <% @file_record.steps.each do |step| %>
         <tr>
-          <td><%= step.file_record.title %></td>
-          <td><%= step.person %></td>
-          <td><%= step.office.name %></td>
+          <td>
+            <% if step.file_record != nil %>
+              <%= step.file_record.title %>
+            <% end %>
+          </td>
+          <td>
+            <% if step.person != nil %>
+              <%= step.person.name %>
+            <% end %>
+          </td>
+            <% if step.office != nil %>
+              <td><%= step.office.name %></td>
+            <% end %>
         </tr>
       <% end %>
     </tbody>
