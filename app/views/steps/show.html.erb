@@ -1,21 +1,21 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <% if @step.file_record != nil %>
+  <% if @step.file_record %>
     <strong>File record:</strong>
     <%= @step.file_record.title %>
   <% end %>
 </p>
 
 <p>
-  <% if @step.person != nil %>
+  <% if @step.person %>
     <strong>Person:</strong>
     <%= @step.person.name %>
   <% end %>
 </p>
 
 <p>
-  <% if @step.office != nil %>
+  <% if @step.office %>
     <strong>Office:</strong>
     <%= @step.office.name %>
   <% end %>

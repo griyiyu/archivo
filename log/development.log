@@ -8064,3 +8064,2204 @@ Processing by FileRecordsController#show as HTML
   [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 5]]
   Rendered file_records/show.html.erb within layouts/application (5.9ms)
 Completed 200 OK in 17ms (Views: 13.7ms | ActiveRecord: 0.7ms)
+  [1m[36mOffice Load (0.3ms)[0m  [1mSELECT "offices".* FROM "offices"  WHERE "offices"."name" = 'asas'[0m
+  [1m[35mOffice Load (0.2ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."name" = 'asas'  ORDER BY "offices"."id" ASC LIMIT 1
+  [1m[36mFileRecord Load (0.4ms)[0m  [1mSELECT  "file_records".* FROM "file_records"   ORDER BY "file_records"."id" DESC LIMIT 1[0m
+  [1m[35mOffice Load (0.3ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."name" = 'Archivo'  ORDER BY "offices"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "steps" ("created_at", "file_record_id", "office_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-07-10 18:01:13.002684"], ["file_record_id", 10], ["office_id", 5], ["updated_at", "2014-07-10 18:01:13.002684"]]
+  [1m[36m (124.4ms)[0m  [1mcommit transaction[0m
+  [1m[36mFileRecord Load (0.3ms)[0m  [1mSELECT  "file_records".* FROM "file_records"   ORDER BY "file_records"."id" DESC LIMIT 1[0m
+  [1m[35mOffice Load (0.2ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."name" = 'Archivo'  ORDER BY "offices"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "steps" ("created_at", "file_record_id", "office_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-07-10 18:01:30.607244"], ["file_record_id", 10], ["office_id", 5], ["updated_at", "2014-07-10 18:01:30.607244"]]
+  [1m[36m (154.2ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/file_records/10" for 127.0.0.1 at 2014-07-10 15:01:40 -0300
+Processing by FileRecordsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mStep Load (0.3ms)[0m  SELECT "steps".* FROM "steps"  WHERE "steps"."file_record_id" = ?  [["file_record_id", 10]]
+  [1m[36mOffice Load (0.2ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mOffice Load (0.2ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered file_records/show.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 40ms (Views: 30.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:01:40 -0300
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:01:40 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:01:40 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:01:40 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:01:40 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:01:40 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:40 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:40 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:40 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:40 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:40 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:40 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:40 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:40 -0300
+
+
+Started GET "/steps" for 127.0.0.1 at 2014-07-10 15:01:51 -0300
+Processing by StepsController#index as HTML
+  [1m[36mStep Load (0.5ms)[0m  [1mSELECT "steps".* FROM "steps"[0m
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mOffice Load (0.2ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOffice Load (0.3ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mOffice Load (0.2ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered steps/index.html.erb within layouts/application (57.6ms)
+Completed 200 OK in 74ms (Views: 69.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:01:51 -0300
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:01:51 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:01:51 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:01:51 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:01:51 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:51 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:01:51 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:51 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:51 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:51 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:51 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:51 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:51 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:51 -0300
+
+
+Started DELETE "/steps/19" for 127.0.0.1 at 2014-07-10 15:01:55 -0300
+Processing by StepsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8FEj57sYswJnoTriSCeaevUaV/p7V2iExHJ2Nmrh7wo=", "id"=>"19"}
+  [1m[35mStep Load (0.4ms)[0m  SELECT  "steps".* FROM "steps"  WHERE "steps"."id" = ? LIMIT 1  [["id", 19]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "steps" WHERE "steps"."id" = ?  [["id", 19]]
+  [1m[36m (145.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/steps
+Completed 302 Found in 150ms (ActiveRecord: 146.3ms)
+
+
+Started GET "/steps" for 127.0.0.1 at 2014-07-10 15:01:55 -0300
+Processing by StepsController#index as HTML
+  [1m[35mStep Load (0.3ms)[0m  SELECT "steps".* FROM "steps"
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mOffice Load (0.2ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mOffice Load (0.2ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mOffice Load (0.2ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOffice Load (0.2ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered steps/index.html.erb within layouts/application (43.8ms)
+Completed 200 OK in 52ms (Views: 48.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:01:55 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:01:55 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:01:55 -0300
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:01:55 -0300
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:01:55 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:01:55 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:55 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:55 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:55 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:55 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:55 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:55 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:55 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:55 -0300
+
+
+Started DELETE "/steps/18" for 127.0.0.1 at 2014-07-10 15:01:58 -0300
+Processing by StepsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8FEj57sYswJnoTriSCeaevUaV/p7V2iExHJ2Nmrh7wo=", "id"=>"18"}
+  [1m[36mStep Load (0.2ms)[0m  [1mSELECT  "steps".* FROM "steps"  WHERE "steps"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "steps" WHERE "steps"."id" = ?[0m  [["id", 18]]
+  [1m[35m (152.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/steps
+Completed 302 Found in 156ms (ActiveRecord: 152.6ms)
+
+
+Started GET "/steps" for 127.0.0.1 at 2014-07-10 15:01:58 -0300
+Processing by StepsController#index as HTML
+  [1m[36mStep Load (0.4ms)[0m  [1mSELECT "steps".* FROM "steps"[0m
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOffice Load (0.2ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered steps/index.html.erb within layouts/application (39.9ms)
+Completed 200 OK in 48ms (Views: 44.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:01:58 -0300
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:01:58 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:01:58 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:01:58 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:01:58 -0300
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:01:58 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:58 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:58 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:58 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:58 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:58 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:58 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:58 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:01:58 -0300
+
+
+Started DELETE "/steps/17" for 127.0.0.1 at 2014-07-10 15:02:01 -0300
+Processing by StepsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8FEj57sYswJnoTriSCeaevUaV/p7V2iExHJ2Nmrh7wo=", "id"=>"17"}
+  [1m[35mStep Load (0.2ms)[0m  SELECT  "steps".* FROM "steps"  WHERE "steps"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "steps" WHERE "steps"."id" = ?  [["id", 17]]
+  [1m[36m (124.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/steps
+Completed 302 Found in 129ms (ActiveRecord: 124.8ms)
+
+
+Started GET "/steps" for 127.0.0.1 at 2014-07-10 15:02:01 -0300
+Processing by StepsController#index as HTML
+  [1m[35mStep Load (0.4ms)[0m  SELECT "steps".* FROM "steps"
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mOffice Load (0.2ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mOffice Load (0.2ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOffice Load (0.2ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered steps/index.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 48ms (Views: 44.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:02:01 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:02:01 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:02:02 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:02:02 -0300
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:02:02 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:02 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:02:02 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:02 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:02 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:02 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:02 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:02 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:02 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:02 -0300
+
+
+Started GET "/file_records/10" for 127.0.0.1 at 2014-07-10 15:02:06 -0300
+Processing by FileRecordsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mStep Load (0.2ms)[0m  SELECT "steps".* FROM "steps"  WHERE "steps"."file_record_id" = ?  [["file_record_id", 10]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered file_records/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:02:06 -0300
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:02:06 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:02:06 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:02:06 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:02:06 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:02:06 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:06 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:06 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:06 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:06 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:06 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:06 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:06 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:06 -0300
+  [1m[35mFileRecord Load (0.3ms)[0m  SELECT  "file_records".* FROM "file_records"   ORDER BY "file_records"."id" DESC LIMIT 1
+  [1m[36mOffice Load (0.3ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."name" = 'Archivo'  ORDER BY "offices"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "steps" ("created_at", "file_record_id", "office_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-07-10 18:02:11.967930"], ["file_record_id", 10], ["office_id", 5], ["updated_at", "2014-07-10 18:02:11.967930"]]
+  [1m[35m (127.1ms)[0m  commit transaction
+
+
+Started GET "/file_records/10" for 127.0.0.1 at 2014-07-10 15:02:15 -0300
+Processing by FileRecordsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mStep Load (0.2ms)[0m  [1mSELECT "steps".* FROM "steps"  WHERE "steps"."file_record_id" = ?[0m  [["file_record_id", 10]]
+  [1m[35mOffice Load (0.2ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOffice Load (0.2ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered file_records/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:02:15 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:02:15 -0300
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:02:15 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:02:15 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:02:15 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:02:15 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:15 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:15 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:15 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:15 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:15 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:15 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:15 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:15 -0300
+
+
+Started GET "/steps" for 127.0.0.1 at 2014-07-10 15:02:22 -0300
+Processing by StepsController#index as HTML
+  [1m[35mStep Load (0.5ms)[0m  SELECT "steps".* FROM "steps"
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.4ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOffice Load (0.2ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered steps/index.html.erb within layouts/application (35.4ms)
+Completed 200 OK in 46ms (Views: 42.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:02:22 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:02:22 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:02:22 -0300
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:02:22 -0300
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:02:22 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:22 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:22 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:22 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:02:22 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:22 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:22 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:22 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:22 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:02:22 -0300
+
+
+Started DELETE "/steps/20" for 127.0.0.1 at 2014-07-10 15:03:22 -0300
+Processing by StepsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8FEj57sYswJnoTriSCeaevUaV/p7V2iExHJ2Nmrh7wo=", "id"=>"20"}
+  [1m[36mStep Load (0.2ms)[0m  [1mSELECT  "steps".* FROM "steps"  WHERE "steps"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "steps" WHERE "steps"."id" = ?[0m  [["id", 20]]
+  [1m[35m (117.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/steps
+Completed 302 Found in 123ms (ActiveRecord: 118.5ms)
+
+
+Started GET "/steps" for 127.0.0.1 at 2014-07-10 15:03:22 -0300
+Processing by StepsController#index as HTML
+  [1m[36mStep Load (0.3ms)[0m  [1mSELECT "steps".* FROM "steps"[0m
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered steps/index.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 44ms (Views: 40.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:22 -0300
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:22 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:22 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:22 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:22 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:22 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:22 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:22 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:22 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:22 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:22 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:22 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:22 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:22 -0300
+
+
+Started GET "/file_records/10" for 127.0.0.1 at 2014-07-10 15:03:27 -0300
+Processing by FileRecordsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mStep Load (0.2ms)[0m  [1mSELECT "steps".* FROM "steps"  WHERE "steps"."file_record_id" = ?[0m  [["file_record_id", 10]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered file_records/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:27 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:27 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:27 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:27 -0300
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:27 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:27 -0300
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:27 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:27 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:27 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:27 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:27 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:27 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:27 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:27 -0300
+
+
+Started GET "/offices" for 127.0.0.1 at 2014-07-10 15:03:45 -0300
+Processing by OfficesController#index as HTML
+  [1m[36mOffice Load (0.2ms)[0m  [1mSELECT "offices".* FROM "offices"[0m
+  Rendered offices/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:45 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:45 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:45 -0300
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:45 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:45 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:45 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:45 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:45 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:45 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:45 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:45 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:45 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:45 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:45 -0300
+
+
+Started DELETE "/offices/5" for 127.0.0.1 at 2014-07-10 15:03:50 -0300
+Processing by OfficesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8FEj57sYswJnoTriSCeaevUaV/p7V2iExHJ2Nmrh7wo=", "id"=>"5"}
+  [1m[35mOffice Load (0.2ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "offices" WHERE "offices"."id" = ?  [["id", 5]]
+  [1m[36m (108.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/offices
+Completed 302 Found in 113ms (ActiveRecord: 109.3ms)
+
+
+Started GET "/offices" for 127.0.0.1 at 2014-07-10 15:03:50 -0300
+Processing by OfficesController#index as HTML
+  [1m[35mOffice Load (0.2ms)[0m  SELECT "offices".* FROM "offices"
+  Rendered offices/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:50 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:50 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:50 -0300
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:50 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:50 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:50 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:50 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:50 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:50 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:50 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:50 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:50 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:50 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:50 -0300
+
+
+Started GET "/offices" for 127.0.0.1 at 2014-07-10 15:03:54 -0300
+Processing by OfficesController#index as HTML
+  [1m[36mOffice Load (0.3ms)[0m  [1mSELECT "offices".* FROM "offices"[0m
+  Rendered offices/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:54 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:54 -0300
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:54 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:54 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:54 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:54 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:54 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:54 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:54 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:54 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:54 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:54 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:54 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:54 -0300
+
+
+Started GET "/steps" for 127.0.0.1 at 2014-07-10 15:03:59 -0300
+Processing by StepsController#index as HTML
+  [1m[35mStep Load (0.3ms)[0m  SELECT "steps".* FROM "steps"
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mOffice Load (0.2ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOffice Load (0.2ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered steps/index.html.erb within layouts/application (34.5ms)
+Completed 200 OK in 45ms (Views: 41.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:59 -0300
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:59 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:59 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:59 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:59 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:03:59 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:59 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:59 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:59 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:59 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:59 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:59 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:59 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:03:59 -0300
+
+
+Started GET "/file_records/10" for 127.0.0.1 at 2014-07-10 15:04:04 -0300
+Processing by FileRecordsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps"  WHERE "steps"."file_record_id" = ?  [["file_record_id", 10]]
+  [1m[36mOffice Load (0.2ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered file_records/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:04 -0300
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:04 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:04 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:04 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:04 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:04 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:04 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:04 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:04 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:04 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:04 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:04 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:04 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:04 -0300
+
+
+Started DELETE "/steps/14" for 127.0.0.1 at 2014-07-10 15:04:09 -0300
+Processing by StepsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8FEj57sYswJnoTriSCeaevUaV/p7V2iExHJ2Nmrh7wo=", "id"=>"14"}
+  [1m[35mStep Load (0.2ms)[0m  SELECT  "steps".* FROM "steps"  WHERE "steps"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "steps" WHERE "steps"."id" = ?  [["id", 14]]
+  [1m[36m (101.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/steps
+Completed 302 Found in 106ms (ActiveRecord: 102.3ms)
+
+
+Started GET "/steps" for 127.0.0.1 at 2014-07-10 15:04:10 -0300
+Processing by StepsController#index as HTML
+  [1m[35mStep Load (0.3ms)[0m  SELECT "steps".* FROM "steps"
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mOffice Load (0.2ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOffice Load (0.2ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered steps/index.html.erb within layouts/application (35.8ms)
+Completed 200 OK in 46ms (Views: 42.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:10 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:10 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:10 -0300
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:10 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:10 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:10 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:10 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:10 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:10 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:10 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:10 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:10 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:10 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:10 -0300
+
+
+Started DELETE "/steps/15" for 127.0.0.1 at 2014-07-10 15:04:13 -0300
+Processing by StepsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8FEj57sYswJnoTriSCeaevUaV/p7V2iExHJ2Nmrh7wo=", "id"=>"15"}
+  [1m[35mStep Load (0.1ms)[0m  SELECT  "steps".* FROM "steps"  WHERE "steps"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "steps" WHERE "steps"."id" = ?  [["id", 15]]
+  [1m[36m (109.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/steps
+Completed 302 Found in 113ms (ActiveRecord: 109.8ms)
+
+
+Started GET "/steps" for 127.0.0.1 at 2014-07-10 15:04:13 -0300
+Processing by StepsController#index as HTML
+  [1m[35mStep Load (0.4ms)[0m  SELECT "steps".* FROM "steps"
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mOffice Load (0.2ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered steps/index.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 40ms (Views: 36.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:13 -0300
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:13 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:13 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:13 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:13 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:13 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:13 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:13 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:13 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:13 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:13 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:13 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:13 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:13 -0300
+
+
+Started DELETE "/steps/16" for 127.0.0.1 at 2014-07-10 15:04:17 -0300
+Processing by StepsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8FEj57sYswJnoTriSCeaevUaV/p7V2iExHJ2Nmrh7wo=", "id"=>"16"}
+  [1m[36mStep Load (0.2ms)[0m  [1mSELECT  "steps".* FROM "steps"  WHERE "steps"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "steps" WHERE "steps"."id" = ?[0m  [["id", 16]]
+  [1m[35m (92.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/steps
+Completed 302 Found in 97ms (ActiveRecord: 93.3ms)
+
+
+Started GET "/steps" for 127.0.0.1 at 2014-07-10 15:04:17 -0300
+Processing by StepsController#index as HTML
+  [1m[36mStep Load (0.4ms)[0m  [1mSELECT "steps".* FROM "steps"[0m
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered steps/index.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 41ms (Views: 37.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:17 -0300
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:17 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:17 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:17 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:17 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:17 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:17 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:17 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:17 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:17 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:17 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:17 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:17 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:17 -0300
+
+
+Started DELETE "/steps/10" for 127.0.0.1 at 2014-07-10 15:04:20 -0300
+Processing by StepsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8FEj57sYswJnoTriSCeaevUaV/p7V2iExHJ2Nmrh7wo=", "id"=>"10"}
+  [1m[36mStep Load (0.2ms)[0m  [1mSELECT  "steps".* FROM "steps"  WHERE "steps"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "steps" WHERE "steps"."id" = ?[0m  [["id", 10]]
+  [1m[35m (120.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/steps
+Completed 302 Found in 125ms (ActiveRecord: 121.1ms)
+
+
+Started GET "/steps" for 127.0.0.1 at 2014-07-10 15:04:21 -0300
+Processing by StepsController#index as HTML
+  [1m[36mStep Load (0.4ms)[0m  [1mSELECT "steps".* FROM "steps"[0m
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOffice Load (0.2ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered steps/index.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 41ms (Views: 37.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:21 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:21 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:21 -0300
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:21 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:21 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:04:21 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:21 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:21 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:21 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:21 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:21 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:21 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:21 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:04:21 -0300
+  [1m[36mOffice Load (0.2ms)[0m  [1mSELECT "offices".* FROM "offices"  WHERE "offices"."name" = 'Archivo'[0m
+  [1m[35mOffice Load (0.4ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."name" = 'Archivo'  ORDER BY "offices"."id" ASC LIMIT 1
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"   ORDER BY "file_records"."id" DESC LIMIT 1[0m
+  [1m[35mFileRecord Load (0.3ms)[0m  SELECT  "file_records".* FROM "file_records"   ORDER BY "file_records"."id" DESC LIMIT 1
+  [1m[36mOffice Load (0.2ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."name" = 'Archivo'  ORDER BY "offices"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "offices" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-07-10 18:05:12.878327"], ["name", "Archivo"], ["updated_at", "2014-07-10 18:05:12.878327"]]
+  [1m[35m (126.3ms)[0m  commit transaction
+  [1m[36mOffice Load (0.3ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."name" = 'Archivo'  ORDER BY "offices"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "steps" ("created_at", "file_record_id", "office_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-07-10 18:05:13.021313"], ["file_record_id", 10], ["office_id", 6], ["updated_at", "2014-07-10 18:05:13.021313"]]
+  [1m[35m (108.8ms)[0m  commit transaction
+
+
+Started GET "/offices" for 127.0.0.1 at 2014-07-10 15:05:25 -0300
+Processing by OfficesController#index as HTML
+  [1m[35mOffice Load (0.3ms)[0m  SELECT "offices".* FROM "offices"
+  Rendered offices/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:25 -0300
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:25 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:25 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:25 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:25 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:25 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:25 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:25 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:25 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:25 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:25 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:25 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:25 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:25 -0300
+
+
+Started GET "/file_records/10" for 127.0.0.1 at 2014-07-10 15:05:29 -0300
+Processing by FileRecordsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mStep Load (0.2ms)[0m  SELECT "steps".* FROM "steps"  WHERE "steps"."file_record_id" = ?  [["file_record_id", 10]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered file_records/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 16ms (Views: 12.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:29 -0300
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:29 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:29 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:29 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:29 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:29 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:29 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:29 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:29 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:29 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:29 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:29 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:29 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:29 -0300
+
+
+Started GET "/steps" for 127.0.0.1 at 2014-07-10 15:05:36 -0300
+Processing by StepsController#index as HTML
+  [1m[36mStep Load (0.4ms)[0m  [1mSELECT "steps".* FROM "steps"[0m
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mOffice Load (0.2ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered steps/index.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 41ms (Views: 37.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:36 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:36 -0300
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:36 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:36 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:36 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:36 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:36 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:36 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:36 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:36 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:36 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:36 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:36 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:36 -0300
+
+
+Started GET "/steps" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+Processing by StepsController#index as HTML
+  [1m[35mStep Load (0.3ms)[0m  SELECT "steps".* FROM "steps"
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered steps/index.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 41ms (Views: 37.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+
+
+Started GET "/steps" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+Processing by StepsController#index as HTML
+  [1m[36mStep Load (0.5ms)[0m  [1mSELECT "steps".* FROM "steps"[0m
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOffice Load (0.2ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mOffice Load (0.2ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered steps/index.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 46ms (Views: 41.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:37 -0300
+
+
+Started GET "/file_records/10" for 127.0.0.1 at 2014-07-10 15:05:42 -0300
+Processing by FileRecordsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mFileRecord Load (0.3ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mStep Load (0.2ms)[0m  [1mSELECT "steps".* FROM "steps"  WHERE "steps"."file_record_id" = ?[0m  [["file_record_id", 10]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOffice Load (0.2ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered file_records/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:42 -0300
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:42 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:42 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:42 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:42 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:42 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:42 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:42 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:42 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:42 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:42 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:42 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:42 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:42 -0300
+
+
+Started GET "/file_records/10" for 127.0.0.1 at 2014-07-10 15:05:44 -0300
+Processing by FileRecordsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mStep Load (0.2ms)[0m  [1mSELECT "steps".* FROM "steps"  WHERE "steps"."file_record_id" = ?[0m  [["file_record_id", 10]]
+  [1m[35mOffice Load (0.2ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered file_records/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:44 -0300
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:44 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:44 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:44 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:44 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:44 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:44 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:44 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:44 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:44 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:44 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:44 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:44 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:44 -0300
+
+
+Started GET "/offices" for 127.0.0.1 at 2014-07-10 15:05:48 -0300
+Processing by OfficesController#index as HTML
+  [1m[35mOffice Load (0.4ms)[0m  SELECT "offices".* FROM "offices"
+  Rendered offices/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:48 -0300
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:48 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:48 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:48 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:48 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:05:48 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:48 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:48 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:48 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:48 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:48 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:48 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:48 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:05:48 -0300
+
+
+Started GET "/file_records/10" for 127.0.0.1 at 2014-07-10 15:07:26 -0300
+Processing by FileRecordsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mStep Load (0.2ms)[0m  SELECT "steps".* FROM "steps"  WHERE "steps"."file_record_id" = ?  [["file_record_id", 10]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mOffice Load (0.3ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered file_records/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 17ms (Views: 13.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:07:26 -0300
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:07:27 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:07:27 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:07:27 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:07:27 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:07:27 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:07:27 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:07:27 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:07:27 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:07:27 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:07:27 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:07:27 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:07:27 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:07:27 -0300
+
+
+Started GET "/file_records/10" for 127.0.0.1 at 2014-07-10 15:07:28 -0300
+Processing by FileRecordsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mFileRecord Load (0.1ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mStep Load (0.1ms)[0m  SELECT "steps".* FROM "steps"  WHERE "steps"."file_record_id" = ?  [["file_record_id", 10]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered file_records/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:07:28 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:07:28 -0300
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:07:28 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:07:28 -0300
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:07:28 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:07:28 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:07:28 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:07:28 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:07:28 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:07:28 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:07:28 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:07:28 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:07:28 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:07:28 -0300
+
+
+Started GET "/file_records/10" for 127.0.0.1 at 2014-07-10 15:09:06 -0300
+Processing by FileRecordsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mStep Load (0.2ms)[0m  SELECT "steps".* FROM "steps"  WHERE "steps"."file_record_id" = ?  [["file_record_id", 10]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered file_records/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:09:07 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:09:07 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:09:07 -0300
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:09:07 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:09:07 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:09:07 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:09:07 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:09:07 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:09:07 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:09:07 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:09:07 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:09:07 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:09:07 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:09:07 -0300
+
+
+Started GET "/file_records/10" for 127.0.0.1 at 2014-07-10 15:09:09 -0300
+Processing by FileRecordsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mStep Load (0.2ms)[0m  SELECT "steps".* FROM "steps"  WHERE "steps"."file_record_id" = ?  [["file_record_id", 10]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered file_records/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:09:09 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:09:09 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:09:09 -0300
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:09:09 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:09:09 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:09:09 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:09:09 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:09:09 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:09:09 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:09:09 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:09:09 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:09:09 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:09:09 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:09:09 -0300
+
+
+Started GET "/file_records/10" for 127.0.0.1 at 2014-07-10 15:09:11 -0300
+Processing by FileRecordsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mStep Load (0.2ms)[0m  SELECT "steps".* FROM "steps"  WHERE "steps"."file_record_id" = ?  [["file_record_id", 10]]
+  [1m[36mOffice Load (0.1ms)[0m  [1mSELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mOffice Load (0.1ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered file_records/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 16ms (Views: 12.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-10 15:09:11 -0300
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-07-10 15:09:11 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-07-10 15:09:11 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-10 15:09:11 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-07-10 15:09:11 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-10 15:09:11 -0300
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-07-10 15:09:11 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-10 15:09:11 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-10 15:09:11 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-07-10 15:09:11 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-07-10 15:09:11 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-10 15:09:11 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-07-10 15:09:11 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-07-10 15:09:11 -0300
+
+
+Started GET "/file_records/10" for 127.0.0.1 at 2014-07-10 15:11:10 -0300
+Processing by FileRecordsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 10]]
+  Rendered file_records/show.html.erb within layouts/application (18.5ms)
+Completed 500 Internal Server Error in 22ms
+
+ActionView::Template::Error (undefined local variable or method `file_record' for #<#<Class:0x007fa7405035b8>:0x00000004027ed0>):
+     5:   <%= @file_record.title %>
+     6: </p>
+     7: 
+     8: <%= step_path(file_record.steps) %> |
+     9: <p>
+    10:   <strong>Asociated steps:</strong>
+    11:   <table>
+  app/views/file_records/show.html.erb:8:in `_app_views_file_records_show_html_erb___4023836446257239294_33629060'
+
+
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.0ms)
+
+
+Started GET "/file_records/10" for 127.0.0.1 at 2014-07-10 15:12:39 -0300
+Processing by FileRecordsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered file_records/show.html.erb within layouts/application (19.8ms)
+Completed 500 Internal Server Error in 24ms
+
+ActionView::Template::Error (undefined local variable or method `file_record' for #<#<Class:0x007fa7405035b8>:0x007fa74116d3f8>):
+     5:   <%= @file_record.title %>
+     6: </p>
+     7: 
+     8: <%= @file_record.steps.step_path(file_record.steps) %> |
+     9: <p>
+    10:   <strong>Asociated steps:</strong>
+    11:   <table>
+  app/views/file_records/show.html.erb:8:in `_app_views_file_records_show_html_erb___4023836446257239294_70178164137140'
+
+
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.5ms)
+
+
+Started GET "/file_records/10" for 127.0.0.1 at 2014-07-10 15:13:49 -0300
+Processing by FileRecordsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1[0m  [["id", 10]]
+  Rendered file_records/show.html.erb within layouts/application (17.2ms)
+Completed 500 Internal Server Error in 21ms
+
+ActionView::Template::Error (undefined local variable or method `steps' for #<#<Class:0x007fa7405035b8>:0x007fa7411d33b0>):
+     5:   <%= @file_record.title %>
+     6: </p>
+     7: 
+     8: <%= steps.step_path(file_record.steps) %> |
+     9: <p>
+    10:   <strong>Asociated steps:</strong>
+    11:   <table>
+  app/views/file_records/show.html.erb:8:in `_app_views_file_records_show_html_erb___4023836446257239294_70178164345600'
+
+
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.1ms)
+
+
+Started GET "/file_records/10" for 127.0.0.1 at 2014-07-10 15:13:56 -0300
+Processing by FileRecordsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered file_records/show.html.erb within layouts/application (14.6ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (undefined local variable or method `steps' for #<#<Class:0x007fa7405035b8>:0x007fa740dfdd58>):
+     5:   <%= @file_record.title %>
+     6: </p>
+     7: 
+     8: <%= steps.step_path(file_record.steps) %> |
+     9: <p>
+    10:   <strong>Asociated steps:</strong>
+    11:   <table>
+  app/views/file_records/show.html.erb:8:in `_app_views_file_records_show_html_erb___4023836446257239294_70178164345600'
+
+
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/gri/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.6ms)

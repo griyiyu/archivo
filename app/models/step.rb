@@ -10,11 +10,11 @@ class Step < ActiveRecord::Base
   end
   
   
-  # Crea una nueva instancia de Step ue tiene la oficina "Archivo" y si no existe la oficina la crea
+  # Crea una nueva instancia de Step que tiene la oficina "Archivo" y si no existe la oficina, la crea
   def self.archivate
     officeName = 'Archivo'
     office = Office.where(name: officeName).first
-    if (office == nil)
+    unless office
       Office.create({ :name => officeName })
       office = Office.where(name: officeName).first
     end
