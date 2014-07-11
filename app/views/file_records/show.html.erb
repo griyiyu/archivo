@@ -18,6 +18,7 @@
     </thead>
 
     <tbody>
+    
     <% @file_record.steps.each do |step| %>
         <tr>
           <td>
@@ -44,3 +45,10 @@
 <%= link_to 'Back', file_records_path %>
 <br>
 <%= link_to 'Select', offices_path %>
+
+
+<%= form_for [@file_record, @step] do |f| %>
+<%= f.collection_select(:step, :office_id, Office.all, :id, :name) %>
+<%= f.submit %>
+<% end %>
+

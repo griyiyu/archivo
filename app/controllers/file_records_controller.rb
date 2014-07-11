@@ -10,6 +10,8 @@ class FileRecordsController < ApplicationController
   # GET /file_records/1
   # GET /file_records/1.json
   def show
+    #definir @step para poder usarlo en el form del show
+    @step = @file_record.steps.build
   end
 
   # GET /file_records/new
