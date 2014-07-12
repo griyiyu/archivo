@@ -77,7 +77,4 @@ class FileRecordsController < ApplicationController
       params.require(:file_record).permit(:title)
     end
     
-    def set_user
-      @user = 'usuario'
-    end
 end
