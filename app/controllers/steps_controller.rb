@@ -1,6 +1,7 @@
 class StepsController < ApplicationController
   before_action :set_step, only: [:show, :edit, :update, :destroy]
 
+
   # GET /steps
   # GET /steps.json
   def index
@@ -71,4 +72,6 @@ class StepsController < ApplicationController
     def step_params
       params.require(:step).permit(:file_record_id, :person_id, :office_id)
     end
+    
+  end
 end
