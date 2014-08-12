@@ -1,7 +1,6 @@
 class StepsController < ApplicationController
   before_action :set_step, only: [:show, :edit, :update, :destroy]
 
-
   # GET /steps
   # GET /steps.json
   def index
@@ -25,15 +24,18 @@ class StepsController < ApplicationController
   # POST /steps
   # POST /steps.json
   def create
+
     @step = Step.new(step_params)
 
     respond_to do |format|
       if @step.save
-        format.html { redirect_to @step, notice: 'Step was successfully created.' }
-        format.json { render :show, status: :created, location: @step }
+        if @step.person.completed?
+          format.html { redirect_to @step, notice: 'Step was successfully created.' }
+        else
+          format.html { redirect_to edit_person_path(@step.person.id), notice: 'La persona debe estar completa para crear un step.' }
+        end
       else
         format.html { render :new }
-        format.json { render json: @step.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -73,5 +75,4 @@ class StepsController < ApplicationController
       params.require(:step).permit(:file_record_id, :person_id, :office_id)
     end
     
-  end
 end

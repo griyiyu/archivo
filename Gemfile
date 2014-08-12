@@ -40,3 +40,7 @@ gem 'spring',        group: :development
 
 gem 'inherited_resources'
 
+gem 'devise'
+
+gem 'pry'
+

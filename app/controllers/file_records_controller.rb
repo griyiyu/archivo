@@ -1,6 +1,7 @@
 class FileRecordsController < ApplicationController
   before_action :set_file_record, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
+    
   # GET /file_records
   # GET /file_records.json
   def index
