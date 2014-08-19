@@ -19,7 +19,10 @@ class Step < ActiveRecord::Base
   
   private
     def assing_person
-      self.person = Person.find_or_create_by(email: email)
+      #binding.pry
+      unless self.person
+        self.person = Person.find_or_create_by(email: email)
+      end
     end  
 
 end

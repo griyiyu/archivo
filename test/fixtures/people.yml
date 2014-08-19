@@ -1,4 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
+completo:
+  name: 'Griselda Ines Arias'
+  dni: '28799532'
+  email: 'ariasg@gmail.com'
+
 incompleto:
   name: 'gri'
+  
+conmail:
+  email: 'agri@gmail.com'
+
