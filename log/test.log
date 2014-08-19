@@ -12879,3 +12879,318 @@ PersonTest: test_la_persona_esta_completa
 PersonTest: test_la_persona_esta_no_completa
 --------------------------------------------
   [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "file_records"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "file_records" ("title", "created_at", "updated_at", "id") VALUES ('Titulo del file_record de prueba', '2014-08-19 04:18:58', '2014-08-19 04:18:58', 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "steps"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "steps" ("file_record_id", "person_id", "office_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, NULL, '2014-08-19 04:18:58', '2014-08-19 04:18:58', 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('emmet@mail.com', '12345678', '2014-08-19 04:18:58', '2014-08-19 04:18:58', 290542155)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "people"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "people" ("name", "dni", "email", "created_at", "updated_at", "id") VALUES ('Nombre completo', 'dniCompleto', 'completo@gmail.com', '2014-08-19 04:18:58', '2014-08-19 04:18:58', 582105407)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "people" ("name", "email", "created_at", "updated_at", "id") VALUES ('gri', 'incompleto@gmail.com', '2014-08-19 04:18:58', '2014-08-19 04:18:58', 491387824)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "people" ("email", "created_at", "updated_at", "id") VALUES ('mail@dominio.com', '2014-08-19 04:18:58', '2014-08-19 04:18:58', 149982963)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "offices"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "offices" ("name", "created_at", "updated_at", "id") VALUES ('Nombre de la oficina del test', '2014-08-19 04:18:58', '2014-08-19 04:18:58', 980190962)
+  [1m[36m (193.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------
+FileRecordsControllerTest: test_debe_existir_el_index
+-----------------------------------------------------
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 290542155]]
+Processing by FileRecordsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 290542155  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT "file_records".* FROM "file_records"[0m
+  Rendered file_records/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 37ms (Views: 29.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+FileRecordsControllerTest: test_debe_existir_el_new
+---------------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 290542155]]
+Processing by FileRecordsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 290542155  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered file_records/_form.html.erb (17.5ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------
+StepTest: test_asignar_persona_por_email
+----------------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."email" = 'newmail@dominio.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-08-19 04:18:59.123106"], ["email", "newmail@dominio.com"], ["updated_at", "2014-08-19 04:18:59.123106"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "steps" ("created_at", "person_id", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-08-19 04:18:59.124775"], ["person_id", 980190963], ["updated_at", "2014-08-19 04:18:59.124775"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+PersonTest: test_la_persona_esta_completa
+-----------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------
+PersonTest: test_la_persona_esta_no_completa
+--------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------------
+StepsControllerTest: test_step_con_email_sin_persona_creada
+-----------------------------------------------------------
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 149982963]]
+Processing by StepsController#create as HTML
+  Parameters: {"step"=>{"person"=>"149982963"}}
+Unpermitted parameters: person
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."email" IS NULL LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-08-19 04:18:59.143662"], ["updated_at", "2014-08-19 04:18:59.143662"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "steps" ("created_at", "person_id", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-08-19 04:18:59.145361"], ["person_id", 980190963], ["updated_at", "2014-08-19 04:18:59.145361"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/people/980190963/edit
+Completed 302 Found in 7ms (ActiveRecord: 0.9ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------
+StepsControllerTest: test_step_con_persona_completa
+---------------------------------------------------
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 582105407]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by StepsController#create as HTML
+  Parameters: {"step"=>{"person"=>"582105407"}}
+Unpermitted parameters: person
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."email" IS NULL LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-08-19 04:18:59.155054"], ["updated_at", "2014-08-19 04:18:59.155054"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "steps" ("created_at", "person_id", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-08-19 04:18:59.156023"], ["person_id", 980190963], ["updated_at", "2014-08-19 04:18:59.156023"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/980190963/edit
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------
+StepsControllerTest: test_step_con_persona_incompleta
+-----------------------------------------------------
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 491387824]]
+Processing by StepsController#create as HTML
+  Parameters: {"step"=>{"person"=>"491387824"}}
+Unpermitted parameters: person
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."email" IS NULL LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-08-19 04:18:59.162622"], ["updated_at", "2014-08-19 04:18:59.162622"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "steps" ("created_at", "person_id", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-08-19 04:18:59.163557"], ["person_id", 980190963], ["updated_at", "2014-08-19 04:18:59.163557"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/980190963/edit
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "file_records"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "file_records" ("title", "created_at", "updated_at", "id") VALUES ('Titulo del file_record de prueba', '2014-08-19 04:20:48', '2014-08-19 04:20:48', 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "steps"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "steps" ("file_record_id", "person_id", "office_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, NULL, '2014-08-19 04:20:48', '2014-08-19 04:20:48', 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('emmet@mail.com', '12345678', '2014-08-19 04:20:48', '2014-08-19 04:20:48', 290542155)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "people"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "people" ("name", "dni", "email", "created_at", "updated_at", "id") VALUES ('Nombre completo', 'dniCompleto', 'completo@gmail.com', '2014-08-19 04:20:48', '2014-08-19 04:20:48', 582105407)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "people" ("name", "email", "created_at", "updated_at", "id") VALUES ('gri', 'incompleto@gmail.com', '2014-08-19 04:20:48', '2014-08-19 04:20:48', 491387824)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "people" ("email", "created_at", "updated_at", "id") VALUES ('mail@dominio.com', '2014-08-19 04:20:48', '2014-08-19 04:20:48', 149982963)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "offices"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "offices" ("name", "created_at", "updated_at", "id") VALUES ('Nombre de la oficina del test', '2014-08-19 04:20:48', '2014-08-19 04:20:48', 980190962)
+  [1m[36m (150.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------
+FileRecordsControllerTest: test_debe_existir_el_index
+-----------------------------------------------------
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 290542155]]
+Processing by FileRecordsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 290542155  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mFileRecord Load (0.2ms)[0m  [1mSELECT "file_records".* FROM "file_records"[0m
+  Rendered file_records/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 37ms (Views: 29.6ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+FileRecordsControllerTest: test_debe_existir_el_new
+---------------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 290542155]]
+Processing by FileRecordsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 290542155  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered file_records/_form.html.erb (17.8ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------
+StepTest: test_asignar_persona_por_email
+----------------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."email" = 'newmail@dominio.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "email", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-08-19 04:20:49.249378"], ["email", "newmail@dominio.com"], ["updated_at", "2014-08-19 04:20:49.249378"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "steps" ("created_at", "person_id", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-08-19 04:20:49.251156"], ["person_id", 980190963], ["updated_at", "2014-08-19 04:20:49.251156"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+PersonTest: test_la_persona_esta_completa
+-----------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------
+PersonTest: test_la_persona_esta_no_completa
+--------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------------
+StepsControllerTest: test_step_con_email_sin_persona_creada
+-----------------------------------------------------------
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 149982963]]
+Processing by StepsController#create as HTML
+  Parameters: {"step"=>{"person"=>"149982963"}}
+Unpermitted parameters: person
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."email" IS NULL LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-08-19 04:20:49.271471"], ["updated_at", "2014-08-19 04:20:49.271471"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "steps" ("created_at", "person_id", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-08-19 04:20:49.272649"], ["person_id", 980190963], ["updated_at", "2014-08-19 04:20:49.272649"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/people/980190963/edit
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------
+StepsControllerTest: test_step_con_persona_completa
+---------------------------------------------------
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 582105407]]
+  [1m[35mFileRecord Load (0.1ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by StepsController#create as HTML
+  Parameters: {"step"=>{"person"=>"582105407"}}
+Unpermitted parameters: person
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."email" IS NULL LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-08-19 04:20:49.281407"], ["updated_at", "2014-08-19 04:20:49.281407"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "steps" ("created_at", "person_id", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-08-19 04:20:49.282520"], ["person_id", 980190963], ["updated_at", "2014-08-19 04:20:49.282520"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/980190963/edit
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------
+StepsControllerTest: test_step_con_persona_incompleta
+-----------------------------------------------------
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 491387824]]
+Processing by StepsController#create as HTML
+  Parameters: {"step"=>{"person"=>"491387824"}}
+Unpermitted parameters: person
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."email" IS NULL LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-08-19 04:20:49.289121"], ["updated_at", "2014-08-19 04:20:49.289121"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "steps" ("created_at", "person_id", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-08-19 04:20:49.290078"], ["person_id", 980190963], ["updated_at", "2014-08-19 04:20:49.290078"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/980190963/edit
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "file_records"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "file_records" ("title", "created_at", "updated_at", "id") VALUES ('Titulo del file_record de prueba', '2014-08-19 04:21:37', '2014-08-19 04:21:37', 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "steps"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "steps" ("file_record_id", "person_id", "office_id", "created_at", "updated_at", "id") VALUES (NULL, NULL, NULL, '2014-08-19 04:21:37', '2014-08-19 04:21:37', 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "id") VALUES ('emmet@mail.com', '12345678', '2014-08-19 04:21:37', '2014-08-19 04:21:37', 290542155)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "people"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "people" ("name", "dni", "email", "created_at", "updated_at", "id") VALUES ('Nombre completo', 'dniCompleto', 'completo@gmail.com', '2014-08-19 04:21:37', '2014-08-19 04:21:37', 582105407)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "people" ("name", "email", "created_at", "updated_at", "id") VALUES ('gri', 'incompleto@gmail.com', '2014-08-19 04:21:37', '2014-08-19 04:21:37', 491387824)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "people" ("email", "created_at", "updated_at", "id") VALUES ('mail@dominio.com', '2014-08-19 04:21:37', '2014-08-19 04:21:37', 149982963)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "offices"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "offices" ("name", "created_at", "updated_at", "id") VALUES ('Nombre de la oficina del test', '2014-08-19 04:21:37', '2014-08-19 04:21:37', 980190962)
+  [1m[36m (157.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+PersonTest: test_la_persona_esta_completa
+-----------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------
+PersonTest: test_la_persona_esta_no_completa
+--------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------
+StepTest: test_asignar_persona_por_email
+----------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."email" = 'newmail@dominio.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("created_at", "email", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-08-19 04:21:37.800347"], ["email", "newmail@dominio.com"], ["updated_at", "2014-08-19 04:21:37.800347"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "steps" ("created_at", "person_id", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-08-19 04:21:37.801921"], ["person_id", 980190963], ["updated_at", "2014-08-19 04:21:37.801921"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------
+FileRecordsControllerTest: test_debe_existir_el_index
+-----------------------------------------------------
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 290542155]]
+Processing by FileRecordsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 290542155  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT "file_records".* FROM "file_records"
+  Rendered file_records/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 36ms (Views: 31.1ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------
+FileRecordsControllerTest: test_debe_existir_el_new
+---------------------------------------------------
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 290542155]]
+Processing by FileRecordsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 290542155  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered file_records/_form.html.erb (16.8ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------------
+StepsControllerTest: test_step_con_email_sin_persona_creada
+-----------------------------------------------------------
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 149982963]]
+Processing by StepsController#create as HTML
+  Parameters: {"step"=>{"person"=>"149982963"}}
+Unpermitted parameters: person
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."email" IS NULL LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "people" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2014-08-19 04:21:37.908217"], ["updated_at", "2014-08-19 04:21:37.908217"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "steps" ("created_at", "person_id", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-08-19 04:21:37.909377"], ["person_id", 980190963], ["updated_at", "2014-08-19 04:21:37.909377"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/people/980190963/edit
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------
+StepsControllerTest: test_step_con_persona_completa
+---------------------------------------------------
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1[0m  [["id", 582105407]]
+  [1m[35mFileRecord Load (0.2ms)[0m  SELECT  "file_records".* FROM "file_records"  WHERE "file_records"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by StepsController#create as HTML
+  Parameters: {"step"=>{"person"=>"582105407"}}
+Unpermitted parameters: person
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."email" IS NULL LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-08-19 04:21:37.918077"], ["updated_at", "2014-08-19 04:21:37.918077"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "steps" ("created_at", "person_id", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-08-19 04:21:37.919239"], ["person_id", 980190963], ["updated_at", "2014-08-19 04:21:37.919239"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/980190963/edit
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------
+StepsControllerTest: test_step_con_persona_incompleta
+-----------------------------------------------------
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 491387824]]
+Processing by StepsController#create as HTML
+  Parameters: {"step"=>{"person"=>"491387824"}}
+Unpermitted parameters: person
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."email" IS NULL LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2014-08-19 04:21:37.926678"], ["updated_at", "2014-08-19 04:21:37.926678"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "steps" ("created_at", "person_id", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-08-19 04:21:37.927936"], ["person_id", 980190963], ["updated_at", "2014-08-19 04:21:37.927936"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/people/980190963/edit
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
