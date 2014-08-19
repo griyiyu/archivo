@@ -29,12 +29,13 @@ class StepsController < ApplicationController
 
     respond_to do |format|
       if @step.save
-        
         if @step.person.completed?
-          format.html { redirect_to @step, notice: 'Step was successfully created.' }
+         # format.html { redirect_to file_record_path(@step.file_record), notice: 'Step was successfully created.' }
+         format.html { redirect_to @step, notice: 'Step was successfully created.' }
         else
-          format.html { redirect_to edit_person_path(@step.person), notice: 'La persona debe estar completa.' }
+          format.html { redirect_to edit_person_path(@step.person.id), notice: 'La persona debe estar completa.' }
         end
+          
       else
         format.html { render :new }
       end
@@ -73,7 +74,7 @@ class StepsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def step_params
-      params.require(:step).permit(:file_record_id, :person_id, :office_id, :email)
+      params.require(:step).permit(:file_record_id, :person_id, :office_id)
     end
     
 end

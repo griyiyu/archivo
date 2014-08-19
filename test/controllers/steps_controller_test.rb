@@ -26,4 +26,5 @@ class StepsControllerTest < ActionController::TestCase
     post :create, step: step_hash
     assert_redirected_to edit_person_path(step.person)
   end
+  
 end

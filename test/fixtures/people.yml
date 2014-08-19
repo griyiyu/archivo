@@ -1,13 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 completo:
-  name: 'Griselda Ines Arias'
-  dni: '28799532'
-  email: 'ariasg@gmail.com'
+  name: 'Nombre completo'
+  dni: 'dniCompleto'
+  email: 'completo@gmail.com'
 
 incompleto:
   name: 'gri'
+  email: 'incompleto@gmail.com'
   
 conmail:
-  email: 'agri@gmail.com'
+  email: 'mail@dominio.com'
 

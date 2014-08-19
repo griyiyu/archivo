@@ -2,7 +2,7 @@ require 'test_helper'
 
 class StepTest < ActiveSupport::TestCase
    test "asignar persona por email" do
-     step = Step.create(email: 'ariasgri@gmail.com')
-     assert step.person.email == 'ariasgri@gmail.com'
+     step = Step.create(email: 'newmail@dominio.com')
+     assert_equal('newmail@dominio.com', step.person.email)
    end
 end
