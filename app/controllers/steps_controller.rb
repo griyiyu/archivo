@@ -24,7 +24,7 @@ class StepsController < ApplicationController
   # POST /steps
   # POST /steps.json
   def create
-
+    
     @step = Step.new(step_params)
 
     respond_to do |format|
@@ -72,7 +72,7 @@ class StepsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def step_params
-      params.require(:step).permit(:file_record_id, :person_id, :office_id)
+      params.require(:step).permit(:file_record_id, :office_id, :email)
     end
     
 end

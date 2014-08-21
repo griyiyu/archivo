@@ -17661,3 +17661,154 @@ Processing by StepsController#index as HTML
   [1m[35mCACHE (0.0ms)[0m  SELECT  "offices".* FROM "offices"  WHERE "offices"."id" = ? LIMIT 1  [["id", 1]]
   Rendered steps/index.html.erb within layouts/application (55.3ms)
 Completed 200 OK in 64ms (Views: 59.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/people/2/edit" for 127.0.0.1 at 2014-08-20 18:43:28 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  "people".* FROM "people"  WHERE "people"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered people/_form.html.erb (170.1ms)
+  Rendered people/edit.html.erb within layouts/application (195.2ms)
+Completed 200 OK in 477ms (Views: 438.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-08-20 18:43:29 -0300
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-08-20 18:43:29 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-20 18:43:29 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-08-20 18:43:29 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-08-20 18:43:29 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 18:43:29 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 18:43:29 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 18:43:29 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-20 18:43:29 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-08-20 18:43:29 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-08-20 18:43:29 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-08-20 18:43:29 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-08-20 18:43:29 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 18:43:29 -0300
+
+
+Started GET "/file_records" for 127.0.0.1 at 2014-08-20 18:43:35 -0300
+Processing by FileRecordsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mFileRecord Load (0.5ms)[0m  SELECT "file_records".* FROM "file_records"
+  Rendered file_records/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 166ms (Views: 45.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 18:43:36 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-20 18:43:36 -0300
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-08-20 18:43:36 -0300
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-08-20 18:43:36 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-08-20 18:43:36 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-08-20 18:43:36 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 18:43:36 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 18:43:36 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-20 18:43:36 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-08-20 18:43:36 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-08-20 18:43:36 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-08-20 18:43:36 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-08-20 18:43:36 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 18:43:36 -0300
+
+
+Started GET "/offices" for 127.0.0.1 at 2014-08-20 19:46:42 -0300
+Processing by OfficesController#index as HTML
+  [1m[36mOffice Load (1.0ms)[0m  [1mSELECT "offices".* FROM "offices"[0m
+  Rendered offices/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 41ms (Views: 37.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/file_records.css?body=1" for 127.0.0.1 at 2014-08-20 19:46:42 -0300
+
+
+Started GET "/assets/offices.css?body=1" for 127.0.0.1 at 2014-08-20 19:46:42 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-20 19:46:42 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2014-08-20 19:46:42 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-20 19:46:42 -0300
+
+
+Started GET "/assets/steps.css?body=1" for 127.0.0.1 at 2014-08-20 19:46:42 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-20 19:46:42 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-20 19:46:42 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-20 19:46:42 -0300
+
+
+Started GET "/assets/offices.js?body=1" for 127.0.0.1 at 2014-08-20 19:46:42 -0300
+
+
+Started GET "/assets/file_records.js?body=1" for 127.0.0.1 at 2014-08-20 19:46:42 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2014-08-20 19:46:42 -0300
+
+
+Started GET "/assets/steps.js?body=1" for 127.0.0.1 at 2014-08-20 19:46:42 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-20 19:46:42 -0300

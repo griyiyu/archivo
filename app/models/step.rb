@@ -10,12 +10,16 @@ class Step < ActiveRecord::Base
     create({ :office => Office.start_office })
   end
   
-  
   # Crea una nueva instancia de Step que tiene la oficina "Archivo" y si no existe la oficina, la crea
   def self.archivate
     create({ :office => Office.archivate_office })
   end
   
+  def delete
+    if self == file_record.steps.last
+      super.delete
+    end
+  end
   
   private
     def assing_person
