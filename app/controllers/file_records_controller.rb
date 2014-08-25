@@ -1,11 +1,11 @@
 class FileRecordsController < ApplicationController
   before_action :set_file_record, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
-    
+  
   # GET /file_records
   # GET /file_records.json
   def index
-    @file_records = FileRecord.all
+    @file_records = FileRecord.search(params[:q])
   end
 
   # GET /file_records/1
@@ -75,7 +75,7 @@ class FileRecordsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def file_record_params
-      params.require(:file_record).permit(:title)
+      params.require(:file_record).permit(:title, :q)
     end
     
 end

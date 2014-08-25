@@ -18,5 +18,11 @@ class FileRecordsControllerTest < ActionController::TestCase
     get :new
     assert_response :success
   end
+  
+  test "deberia encontrar un expediente a partir de un texto desde el controlador" do
+    get :index, { title: 'mar'}
+    assert_response :success, 'no fue exitoso'
+    assert_not_nil assigns :file_records
+  end
 
 end

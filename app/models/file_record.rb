@@ -1,6 +1,6 @@
 class FileRecord < ActiveRecord::Base
   has_many :steps, dependent: :destroy
-  
+    
   after_create :create_first_step
   
   def create_first_step
@@ -11,4 +11,8 @@ class FileRecord < ActiveRecord::Base
     steps.archivate
   end
   
+  def self.search(texto)
+    return all unless texto
+    where("title like ?", "%#{ texto }%")
+  end
 end
