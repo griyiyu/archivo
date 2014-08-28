@@ -44,3 +44,5 @@ gem 'devise'
 
 gem 'pry'
 
+gem 'ransack', github: 'activerecord-hackery/ransack', branch: 'rails-4.1'
+

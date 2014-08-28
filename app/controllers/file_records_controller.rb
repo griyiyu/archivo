@@ -5,7 +5,8 @@ class FileRecordsController < ApplicationController
   # GET /file_records
   # GET /file_records.json
   def index
-    @file_records = FileRecord.search(params[:q])
+    @search = FileRecord.search(params[:q])
+    @file_records = @search.result
   end
 
   # GET /file_records/1

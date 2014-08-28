@@ -10,9 +10,5 @@ class FileRecord < ActiveRecord::Base
   def archivate
     steps.archivate
   end
-  
-  def self.search(texto)
-    return all unless texto
-    where("title like ?", "%#{ texto }%")
-  end
+
 end

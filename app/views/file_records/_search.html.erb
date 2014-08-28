@@ -1,5 +1,6 @@
-<%= form_tag(file_records_path, method: "get") do %>
-  <%= label_tag(:q, "Search for:") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search") %>
+<%= search_form_for @search do |f| %>
+  <%= f.label :title_cont %>
+  <%= f.search_field :title_cont %>
+  <%= f.submit "search" %>
 <% end %>
+
